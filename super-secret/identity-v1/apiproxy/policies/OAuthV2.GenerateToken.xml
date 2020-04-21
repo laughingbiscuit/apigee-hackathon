@@ -1,0 +1,8 @@
+<OAuthV2 name="OAuthV2.GenerateToken">
+  <Operation>GenerateAccessToken</Operation>
+  <SupportedGrantTypes>
+    <GrantType>client_credentials</GrantType>
+  </SupportedGrantTypes>
+  <GrantType>request.formparam.grant_type</GrantType>
+  <GenerateResponse>true</GenerateResponse>
+</OAuthV2>

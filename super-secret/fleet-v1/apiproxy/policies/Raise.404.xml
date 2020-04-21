@@ -1,0 +1,8 @@
+<RaiseFault name="Raise.404">
+ <FaultResponse>
+   <Set>
+     <StatusCode>404</StatusCode>
+     <ReasonPhrase>The resource requested was not found</ReasonPhrase>
+   </Set>
+ </FaultResponse>
+</RaiseFault>

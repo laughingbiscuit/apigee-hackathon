@@ -1,0 +1,10 @@
+<AssignMessage name="Assign.Success">
+  <Set>
+    <Payload contentType="application/json">
+{
+  "success": true
+}
+    </Payload>
+  </Set>
+  <AssignTo createNew="true" transport="http" type="response"/>
+</AssignMessage>

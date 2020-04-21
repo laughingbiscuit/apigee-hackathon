@@ -1,0 +1,14 @@
+{
+  "name": "testbot",
+  "version": "0.0.1",
+  "description": "Runs Apickli tests",
+  "main": "init.js",
+  "scripts": {
+    "test": "sh test.sh"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "apickli": "^2.3.3",
+    "cucumber": "^6.0.5"
+  }
+}

@@ -1,0 +1,6 @@
+<ResponseCache name="Response.Cache">
+    <CacheKey>
+        <KeyFragment ref="proxy.pathsuffix" />
+    </CacheKey>
+    <CacheResource>vehicles</CacheResource>
+</ResponseCache>

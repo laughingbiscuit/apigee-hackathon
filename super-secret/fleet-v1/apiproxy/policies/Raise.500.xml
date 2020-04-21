@@ -1,0 +1,8 @@
+<RaiseFault name="Raise.500">
+ <FaultResponse>
+   <Set>
+     <StatusCode>500</StatusCode>
+     <ReasonPhrase>Internal Server Error</ReasonPhrase>
+   </Set>
+ </FaultResponse>
+</RaiseFault>

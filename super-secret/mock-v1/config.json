@@ -1,0 +1,30 @@
+{
+    "mockDirectory": "./mock",
+    "quiet": true,
+    "latency": 5,
+    "logRequestHeaders": false,
+    "webServices": {
+        "status": {
+            "verbs": ["get"],
+            "responses": {
+                "get": {"httpStatus": 200, "mockFile": "status.json"}
+            }
+        },
+        "vehicles": {
+            "verbs": ["get"],
+            "responses": {
+                "get": {"httpStatus": 200, "mockFile": "vehicles.json"}
+            }
+        },
+        "vehicles/:id" : {
+            "verbs": ["get"],
+            "responses": {
+                "get": {"httpStatus": 404, "mockFile": "notfound.json"}
+            },
+            "switch" : "id",
+            "switchResponses": {
+              "id123": {"httpStatus": 200, "mockFile": "vehicle.json"}
+            }
+        }
+    }
+}

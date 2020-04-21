@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow"/>
+    <PostFlow name="PostFlow"/>
+    <Flows>
+      <Flow name="POST /token">
+        <Request>
+        <Step>
+          <Name>OAuthV2.GenerateToken</Name>
+        </Step>
+        </Request>
+        <Condition>proxy.pathsuffix MatchesPath "/token" and request.verb = "POST"</Condition>
+      </Flow>
+      <Flow name="Flow not found">
+        <Request>
+        <Step>
+          <Name>Raise.404</Name>
+        </Step>
+        </Request>
+      </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/identity/v1</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="no target"/>
+</ProxyEndpoint>

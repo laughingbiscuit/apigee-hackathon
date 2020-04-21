@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules>
+      <FaultRule name="GET /status failed">
+        <Step>
+          <Name>Raise.500</Name>
+        </Step>
+        <Condition>proxy.pathsuffix MatchesPath "/status" and response.status.code != 200</Condition>
+      </FaultRule>
+    </FaultRules>
+    <Flows>
+      <Flow name="GET /status">
+        <Response>
+          <Step>
+            <Name>Assign.Success</Name>
+          </Step>
+        </Response>
+        <Condition>proxy.pathsuffix MatchesPath "/status" and request.verb = "GET"</Condition>
+      </Flow>
+    </Flows>
+    <HTTPTargetConnection>
+        <URL>https://apidude-eval-test.apigee.net/mock/v1</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>

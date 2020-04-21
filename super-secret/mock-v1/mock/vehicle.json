@@ -1,0 +1,16 @@
+{
+    "id": "123",
+    "licenseplate": "ZH-ABCD",
+    "finorvin": "WDD***********123",
+    "nickname": "Hans Muster",
+    "modelyear": "2018",
+    "colorname": "polarweiss",
+    "fueltype": "Benzin",
+    "powerhp": "612",
+    "powerkw": "450",
+    "numberofdoors": "5",
+    "numberofseats": "5",
+    "fuellevelpercent": {
+        "value": 40
+    }
+}
